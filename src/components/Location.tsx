@@ -1,0 +1,90 @@
+import { MapPin, Phone, Clock } from 'lucide-react'
+
+export default function Location() {
+    return (
+        <section id="location" className="bg-black py-16 md:py-24">
+            <div className="container px-4 mx-auto md:px-6">
+                <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div className="inline-block rounded-lg bg-red-600/20 px-3 py-1 text-base text-red-600">
+                        Marque um encontro conosco...
+                    </div>
+                    <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+                        Localização <span className="text-white-500">&</span> <span>Horários</span>
+                    </h2>
+                    <p className="mx-auto max-w-[700px] text-gray-400 md:text-lg">
+                        Faça uma visita ou receba suas pizzas preferidas no conforto de casa.
+                    </p>
+                </div>
+                <div className="mx-auto grid max-w-5xl gap-8 py-12 lg:grid-cols-2">
+                    <div className="overflow-hidden rounded-xl bg-zinc-800">
+                        <div className="aspect-video map-placeholder">
+                            <span className="text-lg font-medium">Interactive Map</span>
+                        </div>
+                        <div className="p-6 space-y-4">
+                            <div className="flex items-start gap-3">
+                                <MapPin className="h-5 w-5 text-red-600 mt-1" />
+                                <div>
+                                    <h3 className="font-medium">Endereço</h3>
+                                    <p className="text-gray-400">Av. Santos Dumont, 644 - Água Verde</p>
+                                    <p className="text-gray-400">Laranjeiras do Sul</p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-3">
+                                <Phone className="h-5 w-5 text-red-600 mt-1" />
+                                <div>
+                                    <h3 className="font-medium">Telefone</h3>
+                                    <p className="text-gray-400">(42) 3635-3571</p>
+                                    <p className="text-gray-400">(42) 99162-9051</p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-3">
+                                <Clock className="h-5 w-5 text-red-600 mt-1" />
+                                <div>
+                                    <h3 className="font-medium">Horários</h3>
+                                    <div className="grid grid-cols-2 gap-x-4 text-gray-400">
+                                        <p>Segunda-feira:</p>
+                                        <p>Fechado</p>
+                                        <p>Terça a Quinta:</p>
+                                        <p>18:00 – 22:00</p>
+                                        <p>Sexta e Domingo:</p>
+                                        <p>18:00 – 22:30</p>
+                                        <p>Sábado:</p>
+                                        <p>18:00 – 23:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col justify-center space-y-6">
+                        <div className="rounded-xl bg-zinc-800 p-6">
+                            <h3 className="text-xl font-bold">Informações de delivery</h3>
+                            <p className="mt-2 text-gray-400">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nobis quaerat ad quis unde autem quia.
+                            </p>
+                            <a href="https://wa.me/+5542991629051">
+                                <button className="mt-4 w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-md">
+                                    Peça por delivery agora
+                                </button>
+                            </a>
+                        </div>
+                        <div className="rounded-xl bg-zinc-800 p-6">
+                            <h3 className="text-xl font-bold">Atendimento</h3>
+                            <p className="mt-2 text-gray-400">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil totam commodi ratione vero cum, optio laborum.
+                            </p>
+                            <p className="mt-2 text-gray-400">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum facere magni quas fugit, veritatis fugiat soluta.
+                            </p>
+                            <a href="https://pedido.anota.ai/loja/medeiros-pizzaria">
+                                <button className="mt-4 w-full border border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 py-2 rounded-md">
+                                    Fazer Pedido
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
