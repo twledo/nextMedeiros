@@ -15,7 +15,7 @@ export default function Hero() {
                 animate="visible"
             >
                 <Image
-                    src="/hero.png"
+                    src="/hero.png"         // imagem na pasta public
                     alt="Fundo Hero"
                     fill
                     style={{ objectFit: 'cover', objectPosition: 'center' }}
