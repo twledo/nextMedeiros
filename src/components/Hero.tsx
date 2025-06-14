@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image'
 
 export default function Hero() {
@@ -28,16 +29,16 @@ export default function Hero() {
                         A pizza que virou tradição.
                     </p>
                     <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
-                        <a href="https://pedido.anota.ai/loja/medeiros-pizzaria" className="w-full sm:w-auto">
+                        <Link href="https://pedido.anota.ai/loja/medeiros-pizzaria" className="w-full sm:w-auto">
                             <button className="w-full sm:w-auto bg-red-600 hover:bg-red-700 transition-colors text-white text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-md font-bold">
                                 Peça agora sua pizza!
                             </button>
-                        </a>
-                        <a href="#queridinhas" className="w-full sm:w-auto">
+                        </Link>
+                        <Link href="#queridinhas" className="w-full sm:w-auto">
                             <button className="w-full sm:w-auto border border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 transition-colors text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-md font-bold">
                                 Queridinhas do cardápio
                             </button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

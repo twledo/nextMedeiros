@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function CTA() {
   return (
     <section className="bg-red-600 py-12 md:py-16">
@@ -11,11 +13,11 @@ export default function CTA() {
               Peça online para retirada ou delivery e aproveite nossa pizza hoje mesmo.
             </p>
           </div>
-          <a href="https://pedido.anota.ai/loja/medeiros-pizzaria">
+          <Link href="https://pedido.anota.ai/loja/medeiros-pizzaria">
             <button className="bg-yellow-500 text-black hover:bg-yellow-400 px-8 py-4 rounded-md text-lg font-bold">
               Peça agora
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

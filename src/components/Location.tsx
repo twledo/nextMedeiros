@@ -1,4 +1,5 @@
 import { MapPin, Phone, Clock } from 'lucide-react'
+import Link from 'next/link';
 
 export default function Location() {
     return (
@@ -72,11 +73,11 @@ export default function Location() {
                             <p className="mt-2 text-gray-400">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nobis quaerat ad quis unde autem quia.
                             </p>
-                            <a href="https://wa.me/+5542991629051">
+                            <Link href="https://wa.me/+5542991629051">
                                 <button className="mt-4 w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-md">
                                     Peça por delivery agora
                                 </button>
-                            </a>
+                            </Link>
                         </div>
                         <div className="rounded-xl bg-zinc-800 p-6">
                             <h3 className="text-xl font-bold">Atendimento</h3>
@@ -86,11 +87,11 @@ export default function Location() {
                             <p className="mt-2 text-gray-400">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum facere magni quas fugit, veritatis fugiat soluta.
                             </p>
-                            <a href="https://pedido.anota.ai/loja/medeiros-pizzaria">
+                            <Link href="https://pedido.anota.ai/loja/medeiros-pizzaria">
                                 <button className="mt-4 w-full border border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 py-2 rounded-md">
                                     Fazer Pedido
                                 </button>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
