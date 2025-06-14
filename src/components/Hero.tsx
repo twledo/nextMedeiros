@@ -7,7 +7,7 @@ export default function Hero() {
             {/* Imagem de fundo ocupando toda a área */}
             <div className="absolute inset-0 z-0 brightness-[0.3]">
                 <Image
-                    src="/hero.jpg"          // imagem na pasta public
+                    src="/hero.png"          // imagem na pasta public
                     alt="Fundo Hero"
                     fill                   // faz a imagem preencher o container pai
                     style={{ objectFit: 'cover', objectPosition: 'center' }}
