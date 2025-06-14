@@ -9,6 +9,7 @@
   body {
     font-family: 'Poppins', sans-serif;
   }
+<<<<<<< HEAD
 
   .hero-bg {
     background-image: url('/hero.jpg');
@@ -16,3 +17,6 @@
     background-position: center;
   }
 }
+=======
+}
+>>>>>>> 21cd8c748fcb7ad0fb349e2541f1e388a93eb697

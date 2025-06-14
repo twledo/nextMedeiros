@@ -1,8 +1,13 @@
 export default function Hero() {
     return (
         <section className="relative overflow-hidden">
+<<<<<<< HEAD
             <div className="absolute inset-0 z-0 hero-bg brightness-30"></div>
             <div className="container relative z-10 flex flex-col items-center justify-center px-4 py-20 text-center mx-auto sm:py-24 md:py-32 lg:py-50">
+=======
+            <div className="absolute inset-0 z-0 hero-bg brightness-50"></div>
+            <div className="container relative z-10 flex flex-col items-center justify-center px-4 py-20 text-center mx-auto sm:py-24 md:py-32 lg:py-40">
+>>>>>>> 21cd8c748fcb7ad0fb349e2541f1e388a93eb697
                 <div className="space-y-6 sm:space-y-8">
                     <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-8xl">
                         <span className="text-white">A melhor</span>
