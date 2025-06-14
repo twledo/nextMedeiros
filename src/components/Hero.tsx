@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { containerVariants, imageVariants, paragraphVariants, buttonVariants, splitText, letterVariants } from './utils/animationsUitls';
+import { containerVariants, imageVariants, paragraphVariants, buttonVariants, splitText } from './utils/animationsUitls';
 
 export default function Hero() {
     return (

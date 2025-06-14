@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { containerVariants, imageVariants, paragraphVariants, buttonVariants, splitText, letterVariants, navLinkVariants } from './utils/animationsUitls';
+import { containerVariants, buttonVariants, splitText, navLinkVariants } from './utils/animationsUitls';
 
 export default function Header() {
     return (
