@@ -40,10 +40,10 @@ export default function Highlights() {
             As líderes de vendas, feitas com os melhores ingredientes para conquistar seu paladar.
           </p>
         </div>
-        <div className="mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-3 px-4">
           {pizzas.map(({ id, src, alt, title, description }) => (
-            <div key={id} className="group relative overflow-hidden rounded-xl bg-zinc-800">
-              <div className="w-[320px] h-[320px] overflow-hidden">
+            <div key={id} className="group relative overflow-hidden rounded-xl bg-zinc-800 max-w-[320px] mx-auto">
+              <div className="aspect-square overflow-hidden">
                 <Image
                   src={src}
                   alt={alt}
