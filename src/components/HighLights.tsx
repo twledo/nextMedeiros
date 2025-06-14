@@ -62,7 +62,7 @@ export default function Highlights() {
         <div className="flex justify-center">
           <Link href="https://pedido.anota.ai/loja/medeiros-pizzaria">
             <button className="border border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 px-4 py-2 rounded-md flex items-center">
-              Ver nosso cardápio <i data-lucide="chevron-right" className="ml-2 h-4 w-4"></i>
+              Ver nosso cardápio<i data-lucide="chevron-right" className="ml-2 h-4 w-4"></i>
             </button>
           </Link>
         </div>
