@@ -1,7 +1,20 @@
+import Image from 'next/image'
+
 export default function Hero() {
     return (
         <section className="relative overflow-hidden">
-            <div className="absolute inset-0 z-0 hero-bg brightness-[0.3]"></div>
+            {/* Imagem de fundo ocupando toda a área */}
+            <div className="absolute inset-0 z-0 brightness-[0.3]">
+                <Image
+                    src="/hero.jpg"          // imagem na pasta public
+                    alt="Fundo Hero"
+                    fill                   // faz a imagem preencher o container pai
+                    style={{ objectFit: 'cover', objectPosition: 'center' }}
+                    priority               // para carregar rápido no LCP
+                />
+            </div>
+
+            {/* Conteúdo em cima */}
             <div className="container relative z-10 flex flex-col items-center justify-center px-4 py-20 text-center mx-auto sm:py-24 md:py-32 lg:py-[250px]">
                 <div className="space-y-6 sm:space-y-8">
                     <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-8xl">
@@ -29,5 +42,5 @@ export default function Hero() {
                 </div>
             </div>
         </section>
-    );
+    )
 }

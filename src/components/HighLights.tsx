@@ -1,3 +1,29 @@
+import Image from 'next/image';
+
+const pizzas = [
+  {
+    id: 1,
+    src: '/hero.png',
+    alt: 'Pizza Margherita',
+    title: 'Pizza Margherita',
+    description: 'Deliciosa pizza com molho de tomate, mussarela e manjericão.',
+  },
+  {
+    id: 2,
+    src: '/pizza.png',
+    alt: 'Pizza Calabresa',
+    title: 'Pizza Calabresa',
+    description: 'Saborosa pizza com calabresa fatiada, cebola e azeitonas.',
+  },
+  {
+    id: 3,
+    src: '/hero.png',
+    alt: 'Pizza Portuguesa',
+    title: 'Pizza Portuguesa',
+    description: 'Combinação clássica com presunto, ovos, cebola e ervilhas.',
+  },
+];
+
 export default function Highlights() {
   return (
     <section id="queridinhas" className="bg-zinc-900 py-16 md:py-24">
@@ -14,20 +40,20 @@ export default function Highlights() {
           </p>
         </div>
         <div className="mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="group relative overflow-hidden rounded-xl bg-zinc-800">
-              <div className="aspect-square overflow-hidden">
-                <img
-                  src={`https://source.unsplash.com/random/400x400?pizza&sig=${i}`}
-                  alt={`Pizza ${i}`}
+          {pizzas.map(({ id, src, alt, title, description }) => (
+            <div key={id} className="group relative overflow-hidden rounded-xl bg-zinc-800">
+              <div className="w-[320px] h-[320px] overflow-hidden">
+                <Image
+                  src={src}
+                  alt={alt}
+                  width={320}
+                  height={320}
                   className="object-cover w-full h-full transition-transform group-hover:scale-105"
                 />
               </div>
               <div className="p-4">
-                <h3 className="text-xl font-bold text-white">Lorem</h3>
-                <p className="mt-1 text-sm text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis soluta eos suscipit unde quae iste.
-                </p>
+                <h3 className="text-xl font-bold text-white">{title}</h3>
+                <p className="mt-1 text-sm text-gray-400">{description}</p>
               </div>
             </div>
           ))}

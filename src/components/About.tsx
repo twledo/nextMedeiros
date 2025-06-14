@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function About() {
     return (
         <section id="about" className="bg-black py-16 md:py-24">
@@ -17,15 +19,19 @@ export default function About() {
                             Quidem dicta asperiores, quam ipsam nam voluptate magni, deleniti dignissimos voluptatem esse quis corrupti recusandae.
                         </p>
                     </div>
-                    <div className="overflow-hidden rounded-xl">
-                        <img
-                            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1374&q=80"
-                            alt="Our restaurant interior"
-                            className="aspect-video object-cover w-full"
+
+                    <div className="overflow-hidden rounded-xl relative aspect-video w-full">
+                        <Image
+                            src="/hero.png"
+                            alt="Medeiros Pizzaria"
+                            fill  // faz a imagem preencher o container pai
+                            className="object-cover"
+                            priority
                         />
                     </div>
+
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

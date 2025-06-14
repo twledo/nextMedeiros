@@ -1,3 +1,23 @@
+import Image from 'next/image';
+
+const depoimentos = [
+    {
+        nome: 'Ana Clara',
+        texto: 'A melhor pizza da região! Atendimento incrível e entrega super rápida.',
+        avatar: '/hero.png',
+    },
+    {
+        nome: 'Carlos Eduardo',
+        texto: 'Sabores diferenciados e ingredientes frescos. Recomendo de olhos fechados!',
+        avatar: '/pizza.png',
+    },
+    {
+        nome: 'Juliana Souza',
+        texto: 'Experiência excelente. A pizza doce é maravilhosa!',
+        avatar: '/hero.png',
+    },
+];
+
 export default function Reviews() {
     return (
         <section id="reviews" className="bg-zinc-900 py-16 md:py-24">
@@ -14,22 +34,26 @@ export default function Reviews() {
                     </p>
                 </div>
                 <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
-                    {[1, 2, 3].map((i) => (
+                    {depoimentos.map((dep, i) => (
                         <div key={i} className="flex flex-col justify-between rounded-xl bg-zinc-800 p-6">
                             <div className="space-y-2">
-                                <div className="flex text-yellow-500">
+                                <div className="flex text-yellow-500 gap-1">
                                     {[...Array(5)].map((_, j) => (
-                                        <i key={j} className="fas fa-star"></i>
+                                        <i key={j} className="fas fa-star text-sm"></i>
                                     ))}
                                 </div>
-                                <p className="text-gray-300">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis unde aspernatur iste minima, ullam explicabo mollitia.
-                                </p>
+                                <p className="text-gray-300">{dep.texto}</p>
                             </div>
                             <div className="mt-6 flex items-center gap-4">
-                                <div className="h-10 w-10 rounded-full bg-zinc-700"></div>
+                                <Image
+                                    src={dep.avatar}
+                                    alt={`Avatar de ${dep.nome}`}
+                                    width={50}
+                                    height={50}
+                                    className="rounded-full aspect-square object-cover"
+                                />
                                 <div>
-                                    <p className="font-medium">Nome {i}</p>
+                                    <p className="font-medium">{dep.nome}</p>
                                 </div>
                             </div>
                         </div>
