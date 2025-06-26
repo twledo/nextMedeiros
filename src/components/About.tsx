@@ -13,10 +13,12 @@ export default function About() {
                             Sobre <span className="text-white-500">Medeiros</span> <span className="text-white-600">Pizzaria</span>
                         </h2>
                         <p className="text-gray-400 md:text-lg">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nihil soluta voluptates numquam dolorem sequi error doloribus.
+                            Há mais de [X anos] servindo as melhores pizzas de Laranjeiras do Sul,
+                            a Medeiros Pizzaria se tornou referência em sabor e qualidade na região.
                         </p>
                         <p className="text-gray-400 md:text-lg">
-                            Quidem dicta asperiores, quam ipsam nam voluptate magni, deleniti dignissimos voluptatem esse quis corrupti recusandae.
+                            Com ingredientes frescos e receitas tradicionais, oferecemos uma
+                            experiência gastronômica única que conquista clientes em cada fatia.
                         </p>
                     </div>
 

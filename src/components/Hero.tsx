@@ -23,7 +23,7 @@ export default function Hero() {
                     className="rounded-none"
                     priority
                 />
-                <div className="absolute inset-0 bg-black/70" aria-hidden="true"></div>
+                <div className="absolute inset-0 bg-black/75" aria-hidden="true"></div>
             </motion.div>
             {/* Imagem à direita no desktop */}
             <motion.div
@@ -40,7 +40,7 @@ export default function Hero() {
                     className="rounded-none"
                     priority
                 />
-                <div className="absolute inset-0 bg-black/20" aria-hidden="true"></div>
+                <div className="absolute inset-0 bg-black/15" aria-hidden="true"></div>
             </motion.div>
             <div className="container relative z-10 flex flex-col lg:flex-row items-center justify-between px-4 py-20 mx-auto sm:py-24 md:py-32 lg:py-[180px]">
                 {/* Texto à esquerda */}

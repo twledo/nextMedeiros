@@ -55,12 +55,8 @@ export default function Location() {
                                     <div className="grid grid-cols-2 gap-x-4 text-gray-400">
                                         <p>Segunda-feira:</p>
                                         <p>Fechado</p>
-                                        <p>Terça a Quinta:</p>
+                                        <p>Terça-feira à Domingo:</p>
                                         <p>18:00 – 22:00</p>
-                                        <p>Sexta e Domingo:</p>
-                                        <p>18:00 – 22:30</p>
-                                        <p>Sábado:</p>
-                                        <p>18:00 – 23:00</p>
                                     </div>
                                 </div>
                             </div>

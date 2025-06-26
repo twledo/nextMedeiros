@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
     return (
@@ -35,23 +36,23 @@ export default function Footer() {
                             <p className="text-sm text-gray-400">Laranjerias do Sul</p>
                             <p className="mt-2 text-sm text-gray-400">(42) 3635-3571</p>
                             <p className="mt-2 text-sm text-gray-400">(42) 99162-9051</p>
-                            <p className="mt-2 text-sm text-gray-400"> --email--</p>
+                            {/* <p className="mt-2 text-sm text-gray-400"> --email--</p> */}
                         </address>
                     </div>
                     <div>
                         <h3 className="text-lg font-medium">Conecte-se Conosco</h3>
                         <div className="mt-4 flex gap-4">
-                            <Link href="https://www.facebook.com/share/1DhHGpQ5as/" className="text-gray-400 hover:text-white">
+                            <Link href="https://www.facebook.com/share/1DhHGpQ5as/" className="text-gray-400 hover:text-white transition-colors">
                                 <span className="sr-only">Facebook</span>
-                                <i className="fab fa-facebook-f"></i>
+                                <FaFacebookF size={20} />
                             </Link>
-                            <Link href="https://www.instagram.com/medeirospizzarialds" className="text-gray-400 hover:text-white">
+                            <Link href="https://www.instagram.com/medeirospizzarialds" className="text-gray-400 hover:text-white transition-colors">
                                 <span className="sr-only">Instagram</span>
-                                <i className="fab fa-instagram"></i>
+                                <FaInstagram size={20} />
                             </Link>
-                            <Link href="https://wa.me/+5542991629051" className="text-gray-400 hover:text-white">
+                            <Link href="https://wa.me/+5542991629051" className="text-gray-400 hover:text-white transition-colors">
                                 <span className="sr-only">WhatsApp</span>
-                                <i className="fab fa-whatsapp"></i>
+                                <FaWhatsapp size={20} />
                             </Link>
                         </div>
                     </div>

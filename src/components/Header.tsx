@@ -7,7 +7,7 @@ import { containerVariants, buttonVariants, navLinkVariants } from './utils/anim
 export default function Header() {
     return (
         <motion.header
-            className="sticky top-0 z-50 bg-black-900 backdrop-blur-md border-b border-zinc-900 shadow-lg"
+            className="sticky top-0 z-50 bg-black/95 md:bg-black/60 md:backdrop-blur-md border-b border-zinc-900 shadow-lg"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
