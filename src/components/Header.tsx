@@ -2,39 +2,39 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { containerVariants, buttonVariants, splitText, navLinkVariants } from './utils/animationsUitls';
+import { containerVariants, buttonVariants, navLinkVariants } from './utils/animationsUitls';
 
 export default function Header() {
     return (
         <motion.header
-            className="sticky top-0 z-50 bg-black/90 backdrop-blur-sm"
+            className="sticky top-0 z-50 bg-black-900 backdrop-blur-md border-b border-zinc-900 shadow-lg"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
         >
-            <div className="container flex h-16 items-center justify-between px-4 mx-auto md:px-6">
-                <Link href="/" className="flex items-center gap-2 text-xl font-bold">
+            <div className="container flex h-16 items-center justify-between px-2 sm:px-4 md:px-6 max-w-full">
+                <Link href="/" className="flex items-center gap-1 sm:gap-2 text-lg sm:text-xl font-bold">
                     <motion.span
                         initial="hidden"
                         animate="visible"
                         variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.05 } } }}
-                        className="text-xl text-red-600"
+                        className="text-lg sm:text-xl text-red-600"
                     >
-                        {splitText('MEDEIROS')}
+                        MEDEIROS
                     </motion.span>
                     <motion.span
                         initial="hidden"
                         animate="visible"
                         variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.05 } } }}
-                        className="text-xl text-yellow-400"
+                        className="text-lg sm:text-xl text-yellow-400"
                     >
-                        {splitText('PIZZARIA')}
+                        PIZZARIA
                     </motion.span>
                 </Link>
-                <nav className="hidden md:flex gap-8">
+                <nav className="hidden md:flex gap-4 sm:gap-8">
                     <motion.div variants={navLinkVariants}>
                         <Link href="#queridinhas" className="text-base font-medium hover:text-yellow-500 transition-colors">
-                            Mais pedidas
+                            Queridinhas
                         </Link>
                     </motion.div>
                     <motion.div variants={navLinkVariants}>
@@ -53,7 +53,7 @@ export default function Header() {
                         </Link>
                     </motion.div>
                 </nav>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 sm:gap-4">
                     <motion.div variants={buttonVariants} className="hidden md:block">
                         <Link href="https://pedido.anota.ai/loja/medeiros-pizzaria">
                             <motion.button
