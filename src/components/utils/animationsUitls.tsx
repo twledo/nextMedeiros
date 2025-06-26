@@ -1,4 +1,4 @@
-import { motion, Variants } from 'framer-motion';
+import { Variants } from 'framer-motion';
 
 // Container com efeito de fade, scale e leve blur e neon sutil
 export const containerVariants: Variants = {
