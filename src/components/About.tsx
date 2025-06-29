@@ -7,18 +7,23 @@ export default function About() {
                 <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
                     <div className="flex flex-col justify-center space-y-4">
                         <div className="inline-block rounded-lg bg-red-600/20 px-3 py-1 text-base text-red-600">
-                            Sobre a melhor pizzaria...
+                            Excelência em cada detalhe...
                         </div>
                         <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
-                            Sobre <span className="text-white-500">Medeiros</span> <span className="text-white-600">Pizzaria</span>
+                            Sobre Medeiros Pizzaria
                         </h2>
                         <p className="text-gray-400 md:text-lg">
-                            Há mais de [X anos] servindo as melhores pizzas de Laranjeiras do Sul,
-                            a Medeiros Pizzaria se tornou referência em sabor e qualidade na região.
+                            Reconhecida pela qualidade excepcional de nossos produtos, a Medeiros Pizzaria
+                            oferece pizzas com sabores autênticos e generoso recheio, conquistando o paladar
+                            mais exigente de Laranjeiras do Sul.
                         </p>
                         <p className="text-gray-400 md:text-lg">
-                            Com ingredientes frescos e receitas tradicionais, oferecemos uma
-                            experiência gastronômica única que conquista clientes em cada fatia.
+                            Nosso compromisso com a excelência se reflete no atendimento personalizado,
+                            na agilidade das entregas e na constante busca pela satisfação total de nossos clientes.
+                            Cada pizza é preparada com dedicação e ingredientes selecionados.
+                        </p>
+                        <p className="text-gray-400 md:text-lg">
+                            Venha descobrir por que somos a escolha preferida quando o assunto é pizza de qualidade.
                         </p>
                     </div>
 
@@ -26,14 +31,13 @@ export default function About() {
                         <Image
                             src="/hero.png"
                             alt="Medeiros Pizzaria"
-                            fill  // faz a imagem preencher o container pai
+                            fill
                             className="object-cover"
                             priority
                         />
                     </div>
-
                 </div>
             </div>
-        </section >
+        </section>
     );
 }
