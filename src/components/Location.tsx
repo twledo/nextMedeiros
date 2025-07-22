@@ -17,18 +17,20 @@ export default function Location() {
                     </p>
                 </div>
                 <div className="mx-auto grid max-w-5xl gap-8 py-12 lg:grid-cols-2">
-                    <div className="overflow-hidden rounded-xl bg-zinc-800">
-                        <div className="aspect-[16/16] min-h-[540px]">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.407387364538!2d-52.470000000000006!3d-25.407000000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e6fbdbf5fef2cb%3A0xXXXXXXXXXXXXXXXX!2sAv.%20Santos%20Dumont%2C%20644%20-%20%C3%81gua%20Verde%2C%20Laranjeiras%20do%20Sul!5e0!3m2!1spt-BR!2sbr!4v1710000000000"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                className="rounded-xl w-full h-full"
-                            ></iframe>
+                    <div className="flex justify-center items-center">
+                        <div className="overflow-hidden rounded-xl bg-zinc-800 w-full max-w-[500px] mx-auto">
+                            <div className="relative w-full h-[300px] md:h-[400px] lg:h-[540px]">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.407387364538!2d-52.470000000000006!3d-25.407000000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e6fbdbf5fef2cb%3A0xXXXXXXXXXXXXXXXX!2sAv.%20Santos%20Dumont%2C%20644%20-%20%C3%81gua%20Verde%2C%20Laranjeiras%20do%20Sul!5e0!3m2!1spt-BR!2sbr!4v1710000000000"
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    className="rounded-xl w-full h-full absolute top-0 left-0"
+                                ></iframe>
+                            </div>
                         </div>
                     </div>
                     <div className="flex flex-col justify-center">
