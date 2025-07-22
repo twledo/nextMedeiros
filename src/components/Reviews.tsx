@@ -52,7 +52,7 @@ export default function Reviews() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % depoimentos.length);
-        }, 10000);
+        }, 4000);
 
         return () => clearInterval(interval);
     }, []);

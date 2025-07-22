@@ -1,5 +1,8 @@
+"use client";
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 const pizzas = [
   {
@@ -26,6 +29,16 @@ const pizzas = [
 ];
 
 export default function Highlights() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % pizzas.length);
+    }, 4000); // Alterna a cada 4 segundos
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="queridinhas" className="bg-zinc-900 py-16 md:py-24">
       <div className="container px-4 mx-auto md:px-6">
@@ -40,7 +53,52 @@ export default function Highlights() {
             As líderes de vendas, feitas com os melhores ingredientes para conquistar seu paladar.
           </p>
         </div>
-        <div className="mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-3 px-4">
+
+        {/* Mobile Card Fixo */}
+        <div className="md:hidden py-12">
+          <div className="max-w-sm mx-auto">
+            <div className="group relative overflow-hidden rounded-xl bg-zinc-800">
+              <div className="aspect-square overflow-hidden relative">
+                {pizzas.map((pizza, index) => (
+                  <Image
+                    key={pizza.id}
+                    src={pizza.src}
+                    alt={pizza.alt}
+                    width={320}
+                    height={320}
+                    className={`absolute inset-0 object-cover w-full h-full transition-opacity duration-500 ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+                      }`}
+                  />
+                ))}
+              </div>
+              <div className="p-4 text-center">
+                <h3 className="text-xl font-bold text-white transition-all duration-300">
+                  {pizzas[currentIndex].title}
+                </h3>
+                <p className="mt-1 text-sm text-gray-400 transition-all duration-300">
+                  {pizzas[currentIndex].description}
+                </p>
+              </div>
+            </div>
+
+            {/* Indicadores */}
+            <div className="flex justify-center mt-4 space-x-2">
+              {pizzas.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentIndex
+                      ? 'bg-red-600 scale-125'
+                      : 'bg-gray-600 hover:bg-gray-500'
+                    }`}
+                  onClick={() => setCurrentIndex(index)}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid mx-auto max-w-5xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-3 px-4">
           {pizzas.map(({ id, src, alt, title, description }) => (
             <div key={id} className="group relative overflow-hidden rounded-xl bg-zinc-800 max-w-[320px] mx-auto">
               <div className="aspect-square overflow-hidden">
@@ -59,10 +117,14 @@ export default function Highlights() {
             </div>
           ))}
         </div>
+
         <div className="flex justify-center">
           <Link href="https://pedido.anota.ai/loja/medeiros-pizzaria">
             <button className="border border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 px-4 py-2 rounded-md flex items-center">
-              Ver nosso cardápio<i data-lucide="chevron-right" className="ml-2 h-4 w-4"></i>
+              Ver nosso cardápio
+              <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </button>
           </Link>
         </div>

@@ -18,10 +18,10 @@ export default function Home() {
       <Header />
       <Reveal><Hero /></Reveal>
       <Reveal delay={0.1}><Highlights /></Reveal>
-      <Reveal delay={0.2}><About /></Reveal>
-      <Reveal delay={0.3}><Reviews /></Reveal>
-      <Reveal delay={0.4}><Location /></Reveal>
-      <Reveal delay={0.5}><CTA /></Reveal>
+      <Reveal delay={0.1}><About /></Reveal>
+      <Reveal delay={0.1}><Reviews /></Reveal>
+      <Reveal delay={0.1}><Location /></Reveal>
+      <Reveal delay={0.1}><CTA /></Reveal>
       <Footer />
     </main>
   )
