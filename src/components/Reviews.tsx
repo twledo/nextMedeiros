@@ -90,7 +90,7 @@ export default function Reviews() {
                                 </div>
                                 <div className="text-gray-300 text-lg italic leading-relaxed">
                                     {depoimentos[currentIndex].texto.split('\n').map((linha, index) => (
-                                        <p key={index} className="mb-2">"{linha}"</p>
+                                        <p key={index} className="mb-2">&quot;{linha}&quot;</p>
                                     ))}
                                 </div>
                             </div>
